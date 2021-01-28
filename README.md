@@ -58,10 +58,10 @@ The ROG Zephryus GA502DU has quite a bit of issues out of the box after installi
 ## 5. NVIDIA PRIME Setup
   - Open the `Optimus Manager` application
   - Copy the following settings
-<img src="https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/images/optimus/optimus1.jpg" width="410">
-<img src="https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/images/optimus/optimus2.jpg" width="410">
-<img src="https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/images/optimus/optimus3.jpg" width="410">
-<img src="https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/images/optimus/optimus4.jpg" width="410">
+<img src="https://i.imgur.com/0q02e7n.jpg" width="410">
+<img src="https://i.imgur.com/XOYAuqo.jpg" width="410">
+<img src="https://i.imgur.com/9IOKEZh.jpg" width="410">
+<img src="https://i.imgur.com/mldZvEG.jpg" width="410">
 
 
   - This should provide seamless switching between the GPUs and have proper power management for the dGPU when it's not in use.
