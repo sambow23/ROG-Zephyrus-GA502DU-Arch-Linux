@@ -28,6 +28,9 @@ The ROG Zephryus GA502DU has quite a bit of issues out of the box after installi
  #### A kernel bug involving `i8042` and `asus-nb-wmi` refusing to load will make the CPU frequency lock to 400MHz and will need the following [Patch](https://raw.githubusercontent.com/YHNdnzj/linux-zen-g14/master/i8042.patch) to fix it
  #### It is preferred to do this on another PC if possible as the 400MHz issue will make kernel compiling very slow
 
+ ### [Pre-built pacman package](https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/kernel-builds)
+ 
+ ### Building
    - Using TKGs `linux-tkg` PKGBUILD
      - `git clone https://github.com/Frogging-Family/linux-tkg.git`
      - `cd <yourclonedir>/linux-tkg`
@@ -74,7 +77,7 @@ The ROG Zephryus GA502DU has quite a bit of issues out of the box after installi
   - ```systemctl --user start asus-notify.service```
   ##### Fan Speed
   - You can switch between the 3 profiles ASUS provided with this laptop ( silent | normal | boost )
-  - `sudo asusctl profile -p <profile>`https://i.imgur.com/R3hCZXR.png
+  - `sudo asusctl profile -p <profile>
   ### rogauracore - Restores keyboard backlight control
   ##### Enable Backlight on boot 
   1. `sudo nano /etc/rc.d/rc.local`
@@ -117,3 +120,14 @@ WantedBy=multi-user.target
 options nvidia_drm modeset=1
 options nvidia "NVreg_DynamicPowerManagement=0x02"
 ```
+
+##### 2. AMD CPU TDP Control via [ryzenadj](https://github.com/FlyGoat/RyzenAdj)
+ - The Ryzen 7 3750H runs hot, even with good quality thermal paste. To keep temperatures down, we can put a TDP limit on the CPU that reduces the clock speed under a reasonable balance between thermals and performance.
+
+ - `yay -S ryzenadj-git`
+
+ - Once it's installed, we can now begin setting limits for the `STAMP`, `fast`, `slow` limit to `25W`, and the `thermal` limit to `90C` to keep it from thermal throttling
+ 
+ - `sudo ryzenadj --stapm-limit=25000 --fast-limit=25000 --slow-limit=25000 --tctl-temp=90`
+ 
+ - With this configuration, the CPU boosts to 4GHz on single-core workloads and maxes out around 3.4GHz with a sustained all-core load.
