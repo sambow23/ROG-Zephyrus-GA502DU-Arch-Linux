@@ -19,11 +19,15 @@ The ROG Zephryus GA502DU has quite a bit of issues out of the box after installi
     - Reboot
  ## 3. Realtek Wi-Fi/Bluetooth
  #### Realtek chips are a bit buggy on linux and most modern chips are not supported in the mainline kernel, so we will have to install a 3rd-party driver off the AUR
- #### You will need some form of internet access to build this, either Ethernet if it works or USB tethering via your Phone
 
+### DKMS Driver
+ #### You will need some form of internet access to build this, either Ethernet if it works or USB tethering via your Phone
 - `yay -S rtl8821ce-dkms-git`
-- Should work fine after a reboot
-    
+- Reboot
+
+### Replacing the Wi-Fi Card
+I replaced mine with an [Intel® Wi-Fi 6 AX200](https://www.amazon.com/gp/product/B07SH6GV5S/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1), everything works out of the box and provides a more fast and stable experience compared to the Realtek chip.
+
  ## 4. Patching the linux kernel
  #### A kernel bug involving `i8042` and `asus-nb-wmi` refusing to load will make the CPU frequency lock to 400MHz and will need the following [Patch](https://raw.githubusercontent.com/YHNdnzj/linux-zen-g14/master/i8042.patch) to fix it
  #### It is preferred to do this on another PC if possible as the 400MHz issue will make kernel compiling very slow
