@@ -27,6 +27,8 @@ The ROG Zephryus GA502DU has quite a bit of issues out of the box after installi
  ## 4. Patching the linux kernel
  #### A kernel bug involving `i8042` and `asus-nb-wmi` refusing to load will make the CPU frequency lock to 400MHz and will need the following [Patch](https://raw.githubusercontent.com/YHNdnzj/linux-zen-g14/master/i8042.patch) to fix it
  #### It is preferred to do this on another PC if possible as the 400MHz issue will make kernel compiling very slow
+ ### `linux-zen` also has the fix and is the preferred option now
+   - `sudo pacman -S linux-zen linux-zen-headers`
 
  ### [Pre-built pacman package](https://github.com/sambow23/ROG-Zephyrus-GA502DU-Arch-Linux/tree/main/kernel-builds)
  
