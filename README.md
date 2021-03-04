@@ -83,7 +83,7 @@ I replaced mine with an [Intel® Wi-Fi 6 AX200](https://www.amazon.com/gp/produc
   - ```systemctl --user start asus-notify.service```
   ##### Fan Speed
   - You can switch between the 3 profiles ASUS provided with this laptop ( silent | normal | boost )
-  - `sudo asusctl profile -p <profile>
+  - `sudo asusctl profile -p <profile>` 
   ### rogauracore - Restores keyboard backlight control
   ##### Enable Backlight on boot 
   1. `sudo nano /etc/rc.d/rc.local`
