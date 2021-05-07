@@ -1,6 +1,6 @@
 # ASUS ROG Zephyrus-GA502DU Arch Linux
 The ROG Zephryus GA502DU has quite a bit of issues out of the box after installing Arch. This GitHub readme should provide everything you need for this laptop to work flawlessly under Arch Linux.
-<img src="https://i.imgur.com/R3hCZXR.png" width="1024">
+<img src="https://i.imgur.com/w3UvUaX.png" width="1024">
 
 
 ## 1. Installing prerequisites
