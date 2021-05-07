@@ -137,3 +137,6 @@ options nvidia "NVreg_DynamicPowerManagement=0x02"
  - `sudo ryzenadj --stapm-limit=25000 --fast-limit=25000 --slow-limit=25000 --tctl-temp=90`
  
  - With this configuration, the CPU boosts to 4GHz on single-core workloads and maxes out around 3.4GHz with a sustained all-core load.
+
+##### 3. Wayland
+  - If you prefer to use the laptop without the dGPU, I would recommend using a Wayland DE/WM as its a much smoother overall experience than X. I have noticed better battery life, UI responsiveness, display management, and touchpad experience in KDE Wayland than any other DE running in Xorg. Most of this is thanks to having the Wayland compositor as the display server. Libinput greatly takes advantage of this with the ELAN1200 touchpad, providing perfect multi-finger gestures with incredible tracking accuracy.
